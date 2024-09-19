@@ -1,0 +1,560 @@
+{
+  "last_node_id": 16,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1605,
+        "1": 106,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 399.8549499511719,
+        "1": 380.5924072265625
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "XY Input: Prompt S/R",
+      "pos": {
+        "0": 325,
+        "1": 886,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 315,
+        "1": 178
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            17
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Prompt S/R"
+      },
+      "widgets_values": [
+        "positive",
+        "standing relaxed",
+        3,
+        "crossing arms",
+        "hands on hips",
+        "raising one hand",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "color": "#223333",
+      "bgcolor": "#335555",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "XY Input: Prompt S/R",
+      "pos": {
+        "0": 226,
+        "1": 599,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": [
+        320,
+        180
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            16
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Prompt S/R"
+      },
+      "widgets_values": [
+        "positive",
+        "portrait",
+        3,
+        "full body",
+        "from side",
+        "from behind",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "color": "#223333",
+      "bgcolor": "#335555",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "Eff. Loader SDXL",
+      "pos": {
+        "0": 286,
+        "1": 44,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 400,
+        "1": 402
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
+          "links": [
+            10
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            11
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            12
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": [
+            14
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Eff. Loader SDXL"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors",
+        -2,
+        "None",
+        -2,
+        6,
+        2,
+        "Baked VAE",
+        "best quality, 1girl, solo, long_hair, smile, casual dress, very_long_hair, blonde_hair, standing relaxed, portrait, ",
+        "text, watermark,",
+        "none",
+        "comfy",
+        1024,
+        1024,
+        1
+      ],
+      "color": "#332222",
+      "bgcolor": "#553333",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "KSampler SDXL (Eff.)",
+      "pos": {
+        "0": 1149,
+        "1": 45,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 325,
+        "1": 546
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sdxl_tuple",
+          "type": "SDXL_TUPLE",
+          "link": 10
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 11
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 12
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler SDXL (Eff.)"
+      },
+      "widgets_values": [
+        275067326320298,
+        null,
+        20,
+        7,
+        "euler",
+        "normal",
+        0,
+        -1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 13,
+      "type": "XY Plot",
+      "pos": {
+        "0": 755,
+        "1": 579,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dependencies",
+          "type": "DEPENDENCIES",
+          "link": 14
+        },
+        {
+          "name": "X",
+          "type": "XY",
+          "link": 16
+        },
+        {
+          "name": "Y",
+          "type": "XY",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCRIPT",
+          "type": "SCRIPT",
+          "links": [
+            15
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Plot"
+      },
+      "widgets_values": [
+        0,
+        "False",
+        "Vertical",
+        "True",
+        "Plot"
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "SDXL_TUPLE"
+    ],
+    [
+      11,
+      10,
+      1,
+      11,
+      1,
+      "LATENT"
+    ],
+    [
+      12,
+      10,
+      2,
+      11,
+      2,
+      "VAE"
+    ],
+    [
+      14,
+      10,
+      3,
+      13,
+      0,
+      "DEPENDENCIES"
+    ],
+    [
+      15,
+      13,
+      0,
+      11,
+      3,
+      "SCRIPT"
+    ],
+    [
+      16,
+      14,
+      0,
+      13,
+      1,
+      "XY"
+    ],
+    [
+      17,
+      15,
+      0,
+      13,
+      2,
+      "XY"
+    ],
+    [
+      18,
+      11,
+      3,
+      16,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909091,
+      "offset": {
+        "0": -255.81626892089844,
+        "1": 15.492198944091797
+      }
+    }
+  },
+  "version": 0.4
+}
