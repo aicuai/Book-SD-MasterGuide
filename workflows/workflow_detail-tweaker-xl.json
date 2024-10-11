@@ -84,10 +84,10 @@
         "0": 1451,
         "1": 189
       },
-      "size": [
-        394.7644348144531,
-        502.2642517089844
-      ],
+      "size": {
+        "0": 394.7644348144531,
+        "1": 502.2642517089844
+      },
       "flags": {},
       "order": 7,
       "mode": 0,
@@ -102,44 +102,6 @@
       "properties": {},
       "widgets_values": [
         "ComfyUI"
-      ]
-    },
-    {
-      "id": 7,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": 413,
-        "1": 389
-      },
-      "size": {
-        "0": 425.27801513671875,
-        "1": 180.6060791015625
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 13
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            6
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "bad hands, bad anatomy, ugly, deformed, (face asymmetry, eyes asymmetry, deformed eyes, deformed mouth, open mouth), "
       ]
     },
     {
@@ -187,45 +149,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "RealVisXL_v5.0_Lightning.safetensors"
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": 415,
-        "1": 186
-      },
-      "size": {
-        "0": 422.84503173828125,
-        "1": 164.31304931640625
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 14
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            16
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "1girl, detailed, beautiful, intricate design, delicate, flowing hair, soft lighting, pastel colors, ornate dress, lace, floral patterns, long hair, glowing, ethereal, serene expression, detailed eyes, highly detailed background, flowers, soft shading, elegant, fantasy setting, fairy tale atmosphere, sparkles, graceful, warm tones\n"
+        "sd_xl_base_1.0.safetensors"
       ]
     },
     {
@@ -280,11 +204,87 @@
       "widgets_values": [
         747064347533087,
         "fixed",
-        30,
+        20,
         8,
-        "dpmpp_sde",
-        "karras",
+        "euler",
+        "normal",
         1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 413,
+        "1": 389
+      },
+      "size": {
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "bad hands, bad anatomy, ugly, deformed, (face asymmetry, eyes asymmetry, deformed eyes, deformed mouth, open mouth), nsfw, nude, naked,"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 415,
+        "1": 186
+      },
+      "size": {
+        "0": 422.84503173828125,
+        "1": 164.31304931640625
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "1girl, detailed, beautiful, intricate design, delicate, flowing hair, soft lighting, pastel colors, ornate dress, lace, floral patterns, long hair, glowing, ethereal, serene expression, detailed eyes, highly detailed background, flowers, soft shading, elegant, fantasy setting, fairy tale atmosphere, sparkles, graceful, warm tones\n"
       ]
     },
     {
@@ -339,7 +339,7 @@
       },
       "widgets_values": [
         "add-detail-xl.safetensors",
-        1.5,
+        0,
         1
       ]
     }
@@ -438,10 +438,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 0.5644739300537773,
       "offset": {
-        "0": 562.9793090820312,
-        "1": 17.83514404296875
+        "0": 1098.32861328125,
+        "1": 116.62667846679688
       }
     }
   },
