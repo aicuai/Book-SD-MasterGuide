@@ -1,0 +1,572 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 25,
+  "nodes": [
+    {
+      "id": 19,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1566,
+        "1": 245
+      },
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "XY Plot",
+      "pos": {
+        "0": 713,
+        "1": 765
+      },
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dependencies",
+          "type": "DEPENDENCIES",
+          "link": 19
+        },
+        {
+          "name": "X",
+          "type": "XY",
+          "link": 24
+        },
+        {
+          "name": "Y",
+          "type": "XY",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCRIPT",
+          "type": "SCRIPT",
+          "links": [
+            20
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Plot"
+      },
+      "widgets_values": [
+        0,
+        "False",
+        "Horizontal",
+        "True",
+        "Plot"
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "XY Input: Seeds++ Batch",
+      "pos": {
+        "0": 316,
+        "1": 1436
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            25
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Seeds++ Batch"
+      },
+      "widgets_values": [
+        4
+      ],
+      "color": "#223333",
+      "bgcolor": "#335555",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "Eff. Loader SDXL",
+      "pos": {
+        "0": 226,
+        "1": 237
+      },
+      "size": {
+        "0": 400,
+        "1": 430
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
+          "links": [
+            16
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            17
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            18
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": [
+            19
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Eff. Loader SDXL"
+      },
+      "widgets_values": [
+        "RealVisXL_v5.0_Lightning.safetensors",
+        -2,
+        "None",
+        -2,
+        6,
+        2,
+        "Baked VAE",
+        "1girl, detailed, beautiful, intricate design, delicate, flowing hair, soft lighting, pastel colors, ornate dress, lace, floral patterns, long hair, glowing, ethereal, serene expression, detailed eyes, highly detailed background, flowers, soft shading, elegant, fantasy setting, fairy tale atmosphere, sparkles, graceful, warm tones",
+        "bad hands, bad anatomy, ugly, deformed, (face asymmetry, eyes asymmetry, deformed eyes, deformed mouth, open mouth)",
+        "none",
+        "comfy",
+        1024,
+        1024,
+        1
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "XY Input: LoRA",
+      "pos": {
+        "0": 314,
+        "1": 785
+      },
+      "size": {
+        "0": 315,
+        "1": 586
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            24
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: LoRA"
+      },
+      "widgets_values": [
+        "LoRA Names+Weights",
+        "/example_folder",
+        false,
+        "ascending",
+        -1,
+        7,
+        1,
+        1,
+        "add-detail-xl.safetensors",
+        -3,
+        1,
+        "add-detail-xl.safetensors",
+        -2,
+        1,
+        "add-detail-xl.safetensors",
+        -1,
+        1,
+        "add-detail-xl.safetensors",
+        0,
+        1,
+        "add-detail-xl.safetensors",
+        1,
+        1,
+        "add-detail-xl.safetensors",
+        2,
+        1,
+        "add-detail-xl.safetensors",
+        3,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1,
+        "None",
+        1,
+        1
+      ],
+      "color": "#223333",
+      "bgcolor": "#335555",
+      "shape": 1
+    },
+    {
+      "id": 13,
+      "type": "KSampler SDXL (Eff.)",
+      "pos": {
+        "0": 1127,
+        "1": 235
+      },
+      "size": {
+        "0": 325,
+        "1": 546
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sdxl_tuple",
+          "type": "SDXL_TUPLE",
+          "link": 16
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 17
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 18
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler SDXL (Eff.)"
+      },
+      "widgets_values": [
+        747064347533087,
+        null,
+        30,
+        7,
+        "dpmpp_sde",
+        "karras",
+        0,
+        -1,
+        "auto",
+        "true"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      16,
+      11,
+      0,
+      13,
+      0,
+      "SDXL_TUPLE"
+    ],
+    [
+      17,
+      11,
+      1,
+      13,
+      1,
+      "LATENT"
+    ],
+    [
+      18,
+      11,
+      2,
+      13,
+      2,
+      "VAE"
+    ],
+    [
+      19,
+      11,
+      3,
+      14,
+      0,
+      "DEPENDENCIES"
+    ],
+    [
+      20,
+      14,
+      0,
+      13,
+      3,
+      "SCRIPT"
+    ],
+    [
+      23,
+      13,
+      3,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      18,
+      0,
+      14,
+      1,
+      "XY"
+    ],
+    [
+      25,
+      20,
+      0,
+      14,
+      2,
+      "XY"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917356,
+      "offset": [
+        -125.4415199640627,
+        -121.61327920738292
+      ]
+    }
+  },
+  "version": 0.4
+}
