@@ -89,7 +89,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "RealVisXl.safetensors"
+        "RealVisXL_V5.0_fp16.safetensors"
       ]
     },
     {
@@ -156,7 +156,7 @@
         "Node name for S&R": "ControlNetLoader"
       },
       "widgets_values": [
-        "controlnet-union-sdxl-1.0.safetensors"
+        "controlnet-union-sdxl-1.0-promax.safetensors"
       ]
     },
     {
