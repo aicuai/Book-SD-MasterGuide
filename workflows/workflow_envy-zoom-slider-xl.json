@@ -115,7 +115,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "RealVisXL_v5.0_Lightning.safetensors"
+        "RealVisXL_V5.0_Lightning_fp16.safetensors"
       ]
     },
     {
