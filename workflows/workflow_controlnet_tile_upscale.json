@@ -3,44 +3,6 @@
   "last_link_id": 143,
   "nodes": [
     {
-      "id": 7,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": -50,
-        "1": 380
-      },
-      "size": {
-        "0": 425.27801513671875,
-        "1": 180.6060791015625
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            15
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "bad hand, bad anatomy, worst quality, ai generated images, low quality, average quality,"
-      ]
-    },
-    {
       "id": 9,
       "type": "SaveImage",
       "pos": {
@@ -147,65 +109,6 @@
       },
       "widgets_values": [
         "controlnet-union-sdxl-1.0-promax.safetensors"
-      ]
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": {
-        "0": 863,
-        "1": 186
-      },
-      "size": {
-        "0": 315,
-        "1": 474
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 135
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 16
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 17
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 138
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            139
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        860227022998597,
-        "fixed",
-        4,
-        2,
-        "dpmpp_sde",
-        "karras",
-        1
       ]
     },
     {
@@ -317,44 +220,6 @@
       "widgets_values": [
         "real_girl_06.jpg",
         "image"
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": -39,
-        "1": 181
-      },
-      "size": {
-        "0": 422.84503173828125,
-        "1": 164.31304931640625
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            14
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "1girl, outdoors, field of flowers, sitting, flower field, sunlight, blonde hair, blue eyes, white crop top, denim shorts, natural lighting, summer, peaceful expression, soft focus, detailed background, freckles\n"
       ]
     },
     {
@@ -528,6 +393,141 @@
         2048,
         true
       ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": {
+        "0": 863,
+        "1": 186
+      },
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 135
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            139
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        860227022998597,
+        "fixed",
+        4,
+        2,
+        "dpmpp_sde",
+        "karras",
+        0.8
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -39,
+        "1": 181
+      },
+      "size": {
+        "0": 422.84503173828125,
+        "1": 164.31304931640625
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "1girl, outdoors, field of flowers, sitting, flower field, sunlight, blonde hair, light brown hair, brown eyes, white crop top, denim shorts, natural lighting, summer, peaceful expression, soft focus, detailed background,\n"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -50,
+        "1": 380
+      },
+      "size": {
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "bad hand, bad anatomy, worst quality, ai generated images, low quality, average quality,"
+      ]
     }
   ],
   "links": [
@@ -672,10 +672,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6303940863128489,
+      "scale": 0.9229599817706413,
       "offset": {
-        "0": 564.342041015625,
-        "1": 57.911441802978516
+        "0": 275.74139404296875,
+        "1": -123.2625503540039
       }
     }
   },
