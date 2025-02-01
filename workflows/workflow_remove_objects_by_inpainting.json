@@ -1,0 +1,1614 @@
+{
+  "last_node_id": 274,
+  "last_link_id": 625,
+  "nodes": [
+    {
+      "id": 129,
+      "type": "PreviewImage",
+      "pos": [
+        2336.602294921875,
+        746.709228515625
+      ],
+      "size": [
+        431.9268798828125,
+        374.3136901855469
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 288
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 90,
+      "type": "PreviewImage",
+      "pos": [
+        420,
+        -800
+      ],
+      "size": [
+        568.406494140625,
+        384.9489440917969
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 200
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 84,
+      "type": "ImageAndMaskPreview",
+      "pos": [
+        1173,
+        -626
+      ],
+      "size": [
+        476.2164306640625,
+        434.4901123046875
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 241,
+          "shape": 7
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 238,
+          "slot_index": 1,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "composite",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageAndMaskPreview"
+      },
+      "widgets_values": [
+        1,
+        "255, 0, 0",
+        false
+      ]
+    },
+    {
+      "id": 255,
+      "type": "Reroute",
+      "pos": [
+        481,
+        127
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 563
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            564,
+            565,
+            568
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 66,
+      "type": "DownloadAndLoadSAM2Model",
+      "pos": [
+        234,
+        -101
+      ],
+      "size": [
+        351.7801513671875,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "sam2_model",
+          "type": "SAM2MODEL",
+          "links": [
+            236,
+            266,
+            322
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadSAM2Model"
+      },
+      "widgets_values": [
+        "sam2.1_hiera_base_plus.safetensors",
+        "single_image",
+        "cuda",
+        "fp16"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "Sam2Segmentation",
+      "pos": [
+        738,
+        -101
+      ],
+      "size": [
+        314.5386047363281,
+        182
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam2_model",
+          "type": "SAM2MODEL",
+          "link": 236
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 568
+        },
+        {
+          "name": "bboxes",
+          "type": "BBOX",
+          "link": 239,
+          "shape": 7
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "widget": {
+            "name": "coordinates_positive"
+          },
+          "shape": 7
+        },
+        {
+          "name": "coordinates_negative",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "coordinates_negative"
+          }
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            238,
+            272,
+            287
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Sam2Segmentation"
+      },
+      "widgets_values": [
+        true,
+        "",
+        "",
+        true
+      ]
+    },
+    {
+      "id": 263,
+      "type": "Reroute",
+      "pos": [
+        4290,
+        1390
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 584
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            585
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 261,
+      "type": "VAEDecode",
+      "pos": [
+        4410,
+        1490
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 598
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 585
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            586
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 264,
+      "type": "SaveImage",
+      "pos": [
+        4660,
+        1490
+      ],
+      "size": [
+        497.1921081542969,
+        455.7359619140625
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 586
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "INPAINT_InpaintWithModel",
+      "pos": [
+        1866.602294921875,
+        746.709228515625
+      ],
+      "size": [
+        355.20001220703125,
+        142
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "inpaint_model",
+          "type": "INPAINT_MODEL",
+          "link": 284
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 620
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 285
+        },
+        {
+          "name": "optional_upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            288,
+            314,
+            613
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "INPAINT_InpaintWithModel"
+      },
+      "widgets_values": [
+        471388584051465,
+        "fixed"
+      ]
+    },
+    {
+      "id": 254,
+      "type": "Reroute",
+      "pos": [
+        972,
+        127
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 565
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            561,
+            619,
+            620
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 262,
+      "type": "Reroute",
+      "pos": [
+        3180,
+        1390
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 583
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            584
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 272,
+      "type": "Reroute",
+      "pos": [
+        1572,
+        1661
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 616
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MASK",
+          "links": [
+            617
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 83,
+      "type": "LoadImage",
+      "pos": [
+        -468,
+        127
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            242,
+            563
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "people.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 128,
+      "type": "INPAINT_LoadInpaintModel",
+      "pos": [
+        1573.6021728515625,
+        959.7070922851562
+      ],
+      "size": [
+        253.9492950439453,
+        60.68787384033203
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INPAINT_MODEL",
+          "type": "INPAINT_MODEL",
+          "links": [
+            284
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "INPAINT_LoadInpaintModel"
+      },
+      "widgets_values": [
+        "big-lama.pt"
+      ]
+    },
+    {
+      "id": 258,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3060,
+        2020
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 570
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            577
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), (human, person, people, boy, girl, man, woman, object,)"
+      ]
+    },
+    {
+      "id": 93,
+      "type": "Florence2toCoordinates",
+      "pos": [
+        400,
+        -310
+      ],
+      "size": [
+        210,
+        102
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "JSON",
+          "link": 204
+        }
+      ],
+      "outputs": [
+        {
+          "name": "center_coordinates",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "bboxes",
+          "type": "BBOX",
+          "links": [
+            239
+          ],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2toCoordinates"
+      },
+      "widgets_values": [
+        "",
+        true
+      ]
+    },
+    {
+      "id": 260,
+      "type": "InpaintModelConditioning",
+      "pos": [
+        3580,
+        1580
+      ],
+      "size": [
+        302.4000244140625,
+        138
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 576
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 577
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 578
+        },
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 614
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 617
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            579
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            580
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            581
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InpaintModelConditioning"
+      },
+      "widgets_values": [
+        true
+      ]
+    },
+    {
+      "id": 87,
+      "type": "Florence2Run",
+      "pos": [
+        -80,
+        -800
+      ],
+      "size": [
+        400,
+        352
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 242,
+          "slot_index": 0
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 197,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            200
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": null,
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": [
+            204,
+            263
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "human, ",
+        "caption_to_phrase_grounding",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        917055638941130,
+        "fixed"
+      ]
+    },
+    {
+      "id": 271,
+      "type": "Reroute",
+      "pos": [
+        2264,
+        1639
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 613
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            614,
+            622
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 88,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": [
+        -470,
+        -780
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "type": "PEFTLORA",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            197,
+            296,
+            623
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "widgets_values": [
+        "thwri/CogFlorence-2.1-Large",
+        "bf16",
+        "sdpa"
+      ]
+    },
+    {
+      "id": 257,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3060,
+        1760
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 569
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 625,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            576
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "background"
+      ]
+    },
+    {
+      "id": 274,
+      "type": "Reroute",
+      "pos": [
+        -45.79573059082031,
+        1756.9412841796875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 623
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "FL2MODEL",
+          "links": [
+            624
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 256,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        2620,
+        1490
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            573
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            569,
+            570
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            578,
+            583
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "realvisxlInpainting_v5lightning.safetensors"
+      ]
+    },
+    {
+      "id": 273,
+      "type": "Florence2Run",
+      "pos": [
+        2520,
+        1740
+      ],
+      "size": [
+        400,
+        352
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 622,
+          "slot_index": 0
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 624,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            625
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": [],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        917055638941130,
+        "fixed"
+      ]
+    },
+    {
+      "id": 126,
+      "type": "GrowMask",
+      "pos": [
+        1186.600830078125,
+        836.7091674804688
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 287
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            285,
+            616
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GrowMask"
+      },
+      "widgets_values": [
+        12,
+        true
+      ]
+    },
+    {
+      "id": 259,
+      "type": "KSampler",
+      "pos": [
+        4030,
+        1490
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 573
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 579
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 580
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 581
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            598
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        82309442288118,
+        "increment",
+        30,
+        1,
+        "dpmpp_2m_sde",
+        "karras",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      197,
+      88,
+      0,
+      87,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      200,
+      87,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      204,
+      87,
+      3,
+      93,
+      0,
+      "JSON"
+    ],
+    [
+      236,
+      66,
+      0,
+      102,
+      0,
+      "SAM2MODEL"
+    ],
+    [
+      238,
+      102,
+      0,
+      84,
+      1,
+      "MASK"
+    ],
+    [
+      239,
+      93,
+      1,
+      102,
+      2,
+      "BBOX"
+    ],
+    [
+      242,
+      83,
+      0,
+      87,
+      0,
+      "IMAGE"
+    ],
+    [
+      284,
+      128,
+      0,
+      127,
+      0,
+      "INPAINT_MODEL"
+    ],
+    [
+      285,
+      126,
+      0,
+      127,
+      2,
+      "MASK"
+    ],
+    [
+      287,
+      102,
+      0,
+      126,
+      0,
+      "MASK"
+    ],
+    [
+      288,
+      127,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      561,
+      254,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ],
+    [
+      563,
+      83,
+      0,
+      255,
+      0,
+      "*"
+    ],
+    [
+      564,
+      255,
+      0,
+      102,
+      1,
+      "IMAGE"
+    ],
+    [
+      565,
+      255,
+      0,
+      254,
+      0,
+      "*"
+    ],
+    [
+      568,
+      255,
+      0,
+      102,
+      1,
+      "IMAGE"
+    ],
+    [
+      569,
+      256,
+      1,
+      257,
+      0,
+      "CLIP"
+    ],
+    [
+      570,
+      256,
+      1,
+      258,
+      0,
+      "CLIP"
+    ],
+    [
+      573,
+      256,
+      0,
+      259,
+      0,
+      "MODEL"
+    ],
+    [
+      576,
+      257,
+      0,
+      260,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      577,
+      258,
+      0,
+      260,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      578,
+      256,
+      2,
+      260,
+      2,
+      "VAE"
+    ],
+    [
+      579,
+      260,
+      0,
+      259,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      580,
+      260,
+      1,
+      259,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      581,
+      260,
+      2,
+      259,
+      3,
+      "LATENT"
+    ],
+    [
+      583,
+      256,
+      2,
+      262,
+      0,
+      "*"
+    ],
+    [
+      584,
+      262,
+      0,
+      263,
+      0,
+      "*"
+    ],
+    [
+      585,
+      263,
+      0,
+      261,
+      1,
+      "VAE"
+    ],
+    [
+      586,
+      261,
+      0,
+      264,
+      0,
+      "IMAGE"
+    ],
+    [
+      598,
+      259,
+      0,
+      261,
+      0,
+      "LATENT"
+    ],
+    [
+      613,
+      127,
+      0,
+      271,
+      0,
+      "*"
+    ],
+    [
+      614,
+      271,
+      0,
+      260,
+      3,
+      "IMAGE"
+    ],
+    [
+      616,
+      126,
+      0,
+      272,
+      0,
+      "*"
+    ],
+    [
+      617,
+      272,
+      0,
+      260,
+      4,
+      "MASK"
+    ],
+    [
+      619,
+      254,
+      0,
+      127,
+      1,
+      "IMAGE"
+    ],
+    [
+      620,
+      254,
+      0,
+      127,
+      1,
+      "IMAGE"
+    ],
+    [
+      622,
+      271,
+      0,
+      273,
+      0,
+      "IMAGE"
+    ],
+    [
+      623,
+      88,
+      0,
+      274,
+      0,
+      "*"
+    ],
+    [
+      624,
+      274,
+      0,
+      273,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      625,
+      273,
+      2,
+      257,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Hires.fix",
+      "bounding": [
+        2471.589599609375,
+        1265.6805419921875,
+        2744.68212890625,
+        1019.369384765625
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Remove Objects",
+      "bounding": [
+        1117,
+        597,
+        1791,
+        614
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Object Detection",
+      "bounding": [
+        -590,
+        -910,
+        2347,
+        1404
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015781,
+      "offset": [
+        -541.4885438143704,
+        -383.79054663380913
+      ]
+    },
+    "node_versions": {
+      "comfy-core": "0.3.13",
+      "comfyui-kjnodes": "188793f2ba0450ce63baa8b9201eea8e876a9c89",
+      "ComfyUI-segment-anything-2": "059815ecc55b17ae9b47d15ed9b39b243d73b25f",
+      "comfyui-inpaint-nodes": "20092c37b9dfc481ca44e8577a9d4a9d426c0e56",
+      "comfyui-florence2": "dffd12506d50f0540b8a7f4b36a05d4fb5fed2de"
+    },
+    "ue_links": []
+  },
+  "version": 0.4
+}
