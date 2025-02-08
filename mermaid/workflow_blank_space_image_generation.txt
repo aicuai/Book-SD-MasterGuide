@@ -1,0 +1,41 @@
+---
+config:
+  layout: elk
+---
+flowchart TD
+ subgraph Generation["生成処理"]
+        H["KSampler<br>画像生成処理<br>Euler/25steps"]
+        A["CheckpointLoaderSimple<br>基本モデルの読み込み<br>animagine-xl-4.0"]
+        B["CLIPTextEncode Positive<br>正のプロンプト<br>魔法少女、金髪など"]
+        C["CLIPTextEncode Negative<br>負のプロンプト<br>低品質、エラーなど"]
+        D["VAEEncodeForInpaint<br>インペイント用エンコード"]
+        E["ControlNetApplyAdvanced<br>ControlNetの制御適用"]
+        F["VAEDecode<br>画像へのデコード"]
+        I["Canny<br>エッジ検出"]
+        G["LoadImage<br>元画像読み込み"]
+        J["MaskFromColor+<br>マスク生成"]
+        K["ControlNetLoader<br>ControlNetモデル読み込み"]
+        L["SaveImage<br>生成画像の保存"]
+  end
+ subgraph s1["高解像度化処理"]
+        M["LatentUpscaleBy<br>潜在空間での1.5倍拡大"]
+        N["KSampler<br>高解像度での追加生成<br>Euler/25steps"]
+        O["VAEDecode<br>最終画像デコード"]
+        P["SaveImage<br>高解像度画像の保存"]
+  end
+    A -- MODEL --> H & N
+    A -- CLIP --> B & C
+    A -- VAE --> D & E & F & O
+    G -- IMAGE --> I & J & D
+    B -- CONDITIONING --> E
+    C -- CONDITIONING --> E
+    K -- CONTROL_NET --> E
+    I -- IMAGE --> E
+    J -- MASK --> D
+    D -- LATENT --> H
+    E -- CONDITIONING --> H & N
+    H -- LATENT --> F & M
+    F -- IMAGE --> L
+    M -- LATENT --> N
+    N -- LATENT --> O
+    O -- IMAGE --> P
