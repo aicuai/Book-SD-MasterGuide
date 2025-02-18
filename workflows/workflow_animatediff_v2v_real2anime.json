@@ -558,7 +558,7 @@
         "crf": 22,
         "save_metadata": true,
         "pingpong": false,
-        "save_output": false,
+        "save_output": true,
         "videopreview": {
           "hidden": false,
           "paused": false,
@@ -633,7 +633,7 @@
         "crf": 22,
         "save_metadata": true,
         "pingpong": false,
-        "save_output": false,
+        "save_output": true,
         "videopreview": {
           "hidden": false,
           "paused": false,
@@ -752,7 +752,7 @@
         "crf": 22,
         "save_metadata": true,
         "pingpong": false,
-        "save_output": false,
+        "save_output": true,
         "videopreview": {
           "hidden": false,
           "paused": false,
