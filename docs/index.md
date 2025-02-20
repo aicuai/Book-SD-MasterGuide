@@ -1,4 +1,4 @@
-# 画像・動画生成AI　ComfyUI マスターガイド
+# 画像・動画生成AI ComfyUI マスターガイド
 
 
 ![Image title](https://m.media-amazon.com/images/I/61LX0KGtkCL._SY425_.jpg){ align=left }
@@ -25,3 +25,11 @@ ComfyUIを使って各種生成AIモデルを利用して画像/動画を生成�
 AICU Japan 株式会社 (著), 白井 暁彦 (著), 早野 康寛 (著)
 
 
+### 書籍情報
+
+- 発売日：2025年4月18日（金）
+- ISBN：978-4-8156-2875-8
+- サイズ：B5判
+- ページ数：320
+
+https://www.sbcr.jp/product/4815628758/
