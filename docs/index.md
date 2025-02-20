@@ -1,17 +1,27 @@
-# 画像生成AI ComfyUIマスターガイド
+# 画像・動画生成AI　ComfyUI マスターガイド
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+![Image title](https://m.media-amazon.com/images/I/61LX0KGtkCL._SY425_.jpg){ align=left }
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+この1冊でComfyUIを使いこなせるようになる！
+圧倒的な情報量でお届けする『マスターガイド』登場
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+ComfyUIを使って各種生成AIモデルを利用して画像/動画を生成する方法を解説します。はじめて画像/動画生成AIを使う人も、ComfyUI環境への移行を考えている人にも画像/動画生成の基礎知識から丁寧に解説し、知識を身に付けて本格的な画像/動画生成を体験しましょう。
+
+<<目次>>　＊内容は変更になる場合がございます。
+・はじめに
+・生成AIの基礎知識
+・ComfyUIの環境構築
+・画像を生成しよう
+・カスタムノードを導入しよう
+・img2img で画像を生成しよう
+・ControlNet を使って画像を生成しよう
+・LoRA を使って画像を生成しよう
+・動画を生成しよう
+・ユースケースを学ぼう
+
+
+AICU Japan 株式会社 (著), 白井 暁彦 (著), 早野 康寛 (著)
+
+

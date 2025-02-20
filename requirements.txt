@@ -4,6 +4,7 @@ mkdocs-blog-plugin
 mkdocs-rss-plugin
 mkdocs-material
 mkdocs-material[imaging]
+mkdocs-glightbox
 python-markdown-math
 fontawesome_markdown
 mdx_unimoji
