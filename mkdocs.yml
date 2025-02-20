@@ -10,7 +10,7 @@ repo_name: Book-SD-MasterGuide
 theme:
   name: material
   palette:
-    primary: indigo
+    primary: purple
     accent: pink
   font:
     text: Noto Sans JP
@@ -67,11 +67,8 @@ extra:
     property: G-HYD6EJ1XDN
   alternate:
     - name: English
-      link: /
+      link: /en/
       lang: en
-    - name: Japanese
-      link: /ja/
-      lang: ja
   consent:
     title: Cookie consent
     description:
