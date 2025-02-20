@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# 画像生成AI ComfyUIマスターガイド
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
