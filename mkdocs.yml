@@ -1,0 +1,131 @@
+site_name: 画像生成AI ComfyUIマスターガイド
+site_url: https://mastercomfyui.aicu.jp
+copyright: "&copy; 2025 AICU Inc. / AICU Japan / Akihiko Shirai / Yasuhiro Hayano"
+repo_url: https://github.com/aicuai/Book-SD-MasterGuide
+repo_name: Book-SD-MasterGuide
+
+# for rss feed
+site_description: 書籍「画像生成AI ComfyUIマスターガイド」の公式サイトです。
+
+theme:
+  name: material
+  font:
+    text: Noto Sans JP #https://be-hase.com/blog/article/2022/04/blog_using_mkdocs/
+    code: Inconsolata
+  features:
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.expand
+    - navigation.top
+    - header.autohide
+  icon:
+    repo: fontawesome/brands/github
+    # repo: fontawesome/brands/gitlab
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - index.md
+  - Blog: blog/index.md
+  - books.md
+  - cv.md
+  - section1:
+    - section1-1:
+        - section1-1-1: sample_page.md
+    - section1-2:
+        - section1-2-1: sample_page.md
+#  - extentions.md
+
+plugins:
+  search:
+    lang: 'ja'
+  blog: #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.blog_dir
+#    blog_dir: .
+    blog_toc: true
+#    post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+#    kwds:
+#    case: lower
+  tags:
+  rss:
+  social:
+
+
+extra:
+  analytics:
+    provider: google
+    property: G-DQDGMD4GSE
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Japanese
+      link: /
+      lang: ja
+  consent:
+    title: Cookie consent
+    description:
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/o_ob
+      name: o_ob on X
+    - icon: fontawesome/brands/github
+      link: https://github.com/aicuai/Book-SD-MasterGuide
+  generator: false
+
+extra_javascript: 
+  - javascripts/github-calendar.min.js
+  - https://platform.twitter.com/widgets.js
+  - js/custom_twitter.js
+#  - js/mathjax.js
+#  - https://polyfill.io/v3/polyfill.min.js?features=es6
+#  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
+extra_css:
+  - stylesheets/github-calendar-responsive.css
+  - stylesheets/extra.css # https://squidfunk.github.io/mkdocs-material/customization/#additional-css
+  - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - def_list
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: monokai
+      linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  
