@@ -46,7 +46,8 @@ theme:
 nav:
   - Book: index.md
   - Updates: blog/index.md
-  - note: https://note.com/aicu
+  - X@AICUai : https://x.com/AICUai
+  - note ゼロから学ぶ「ComfyUI」: https://note.com/aicu/m/md2f2e57c0f3c
   - AICU Inc.: https://corp.aicu.ai
 
 plugins:
