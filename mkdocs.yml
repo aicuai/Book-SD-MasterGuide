@@ -48,7 +48,6 @@ nav:
   - Home: index.md
   - Blog: blog/index.md
   - Vercel: vercel.md
-  - Actions: https://github.com/kaitas/2025/blob/main/.github/workflows/mkdocs.yml
   - About: about.md
 
 plugins:
@@ -83,10 +82,10 @@ extra:
       make our documentation better.
   social:
     - icon: fontawesome/brands/x-twitter
-      link: https://x.com/o_ob
+      link: https://x.com/AICUai
       name: o_ob on X
     - icon: fontawesome/brands/github
-      link: https://github.com/kaitas/vercel-mkdocs-material
+      link: https://github.com/aicuai/Book-SD-MasterGuide
   generator: false
 
 extra_javascript: 
