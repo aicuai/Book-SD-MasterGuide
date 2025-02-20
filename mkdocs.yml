@@ -1,11 +1,11 @@
 site_name: 画像生成AI ComfyUIマスターガイド
-site_name: Vercel-MkDocs-Material
-site_url: https://vercel-mkdocs-material.vercel.app/
-site_description: Vercel-MkDocs-Material is a Material Design theme for MkDocs, a static site generator geared towards (technical) project documentation. It is built with Material Components for the Web, a framework that implements Material Design guidelines from Google.
+site_name: hbook-sd-master-guide
+site_url: https://book-sd-master-guide.vercel.app/
+site_description: 書籍「画像生成AI ComfyUIマスターガイド」の公式サイトです。
 site_author: Akihiko Shirai
 site_dir: public
-repo_url: https://github.com/kaitas/vercel-mkdocs-material
-repo_name: vercel-mkdocs-material
+repo_url: https://github.com/aicuai/Book-SD-MasterGuide
+repo_name: Book-SD-MasterGuide
 
 
 theme:
