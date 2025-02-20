@@ -45,9 +45,8 @@ theme:
 
 nav:
   - Home: index.md
-  - Blog: blog/index.md
-  - Vercel: vercel.md
-  - About: about.md
+  - Updates: blog/index.md
+#  - About: about.md
 
 plugins:
   search:
