@@ -1,6 +1,6 @@
-site_name: 画像・動画生成AI　ComfyUI Master Guide
+site_name: AICU - ComfyUI Master Guide
 site_url: https://comfy.aicu.ai
-site_description: 書籍「画像・動画生成AI　ComfyUI マスターガイド」の公式サイトです。
+site_description: 書籍「画像・動画生成AI　ComfyUI マスターガイド」の公式サイトです。2025年4月発売予定。
 site_author: Akihiko Shirai
 site_dir: public
 repo_url: https://github.com/aicuai/Book-SD-MasterGuide
@@ -10,8 +10,8 @@ repo_name: Book-SD-MasterGuide
 theme:
   name: material
   palette:
-    primary: purple
-    accent: pink
+    primary: deep purple
+    accent: deep orange
   font:
     text: Noto Sans JP
     code: Inconsolata

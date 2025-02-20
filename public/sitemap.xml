@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://book-comfyui.aicu.ai/</loc>
+         <loc>https://comfy.aicu.ai/</loc>
          <lastmod>2025-02-20</lastmod>
     </url>
     <url>
-         <loc>https://book-comfyui.aicu.ai/blog/</loc>
+         <loc>https://comfy.aicu.ai/blog/</loc>
          <lastmod>2025-02-20</lastmod>
     </url>
 </urlset>
