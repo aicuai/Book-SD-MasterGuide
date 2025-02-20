@@ -1,6 +1,6 @@
-site_name: 画像生成AI ComfyUIマスターガイド
+site_name: 画像・動画生成AI　ComfyUI マスターガイド
 site_url: https://book-comfyui.aicu.ai
-site_description: 書籍「画像生成AI ComfyUIマスターガイド」の公式サイトです。
+site_description: 書籍「画像・動画生成AI　ComfyUI マスターガイド」の公式サイトです。
 site_author: Akihiko Shirai
 site_dir: public
 repo_url: https://github.com/aicuai/Book-SD-MasterGuide
