@@ -1,51 +1,55 @@
 site_name: 画像生成AI ComfyUIマスターガイド
-site_url: https://mastercomfyui.aicu.jp
-copyright: "&copy; 2025 AICU Inc. / AICU Japan / Akihiko Shirai / Yasuhiro Hayano"
-repo_url: https://github.com/aicuai/Book-SD-MasterGuide
-repo_name: Book-SD-MasterGuide
+site_name: Vercel-MkDocs-Material
+site_url: https://vercel-mkdocs-material.vercel.app/
+site_description: Vercel-MkDocs-Material is a Material Design theme for MkDocs, a static site generator geared towards (technical) project documentation. It is built with Material Components for the Web, a framework that implements Material Design guidelines from Google.
+site_author: Akihiko Shirai
+site_dir: public
+repo_url: https://github.com/kaitas/vercel-mkdocs-material
+repo_name: vercel-mkdocs-material
 
-# for rss feed
-site_description: 書籍「画像生成AI ComfyUIマスターガイド」の公式サイトです。
 
 theme:
   name: material
+  palette:
+    primary: indigo
+    accent: pink
   font:
-    text: Noto Sans JP #https://be-hase.com/blog/article/2022/04/blog_using_mkdocs/
+    text: Noto Sans JP
     code: Inconsolata
   features:
     - content.code.annotate
     - navigation.tabs
-    - navigation.tabs.sticky
-    # - navigation.sections
-    # - navigation.expand
+    - navigation.sticky
+#    - navigation.sections
     - navigation.top
     - header.autohide
+    - announce.dismiss
   icon:
     repo: fontawesome/brands/github
-    # repo: fontawesome/brands/gitlab
   custom_dir: overrides
   palette:
-    - scheme: default
-      primary: pink
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: pink
       toggle:
-        icon: material/brightness-7
+        icon: material/lightbulb
         name: Switch to dark mode
-    - scheme: slate
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: red
       toggle:
-        icon: material/brightness-4
+        icon: material/lightbulb-outline
         name: Switch to light mode
 
 nav:
-  - index.md
+  - Home: index.md
   - Blog: blog/index.md
-  - books.md
-  - cv.md
-  - section1:
-    - section1-1:
-        - section1-1-1: sample_page.md
-    - section1-2:
-        - section1-2-1: sample_page.md
-#  - extentions.md
+  - Vercel: vercel.md
+  - Actions: https://github.com/kaitas/2025/blob/main/.github/workflows/mkdocs.yml
+  - About: about.md
 
 plugins:
   search:
@@ -53,24 +57,22 @@ plugins:
   blog: #https://squidfunk.github.io/mkdocs-material/plugins/blog/#config.blog_dir
 #    blog_dir: .
     blog_toc: true
+#   post_url_format: # default is yyyy/mm/dd/{slug}
 #    post_slugify: !!python/object/apply:pymdownx.slugs.slugify
 #    kwds:
 #    case: lower
   tags:
-  rss:
-  social:
-
 
 extra:
-  analytics:
-    provider: google
-    property: G-DQDGMD4GSE
+#  analytics:
+#    provider: google
+#    property: G-DQDGMD4GSE
   alternate:
     - name: English
-      link: /en/
+      link: /
       lang: en
     - name: Japanese
-      link: /
+      link: /ja/
       lang: ja
   consent:
     title: Cookie consent
@@ -80,11 +82,11 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
   social:
-    - icon: fontawesome/brands/twitter
+    - icon: fontawesome/brands/x-twitter
       link: https://x.com/o_ob
       name: o_ob on X
     - icon: fontawesome/brands/github
-      link: https://github.com/aicuai/Book-SD-MasterGuide
+      link: https://github.com/kaitas/vercel-mkdocs-material
   generator: false
 
 extra_javascript: 
@@ -101,13 +103,16 @@ extra_css:
   - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
 
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - meta
   - toc:
       permalink: true
   - admonition
   - footnotes
   - def_list
-  - attr_list
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.smartsymbols
@@ -128,4 +133,5 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
-  
+ 
+ 
