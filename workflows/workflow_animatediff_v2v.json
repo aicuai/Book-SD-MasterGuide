@@ -825,7 +825,7 @@
         "Node name for S&R": "VHS_LoadVideo"
       },
       "widgets_values": {
-        "video": "2795746-uhd_2160_3840_25fps.mp4",
+        "video": "man_dancing_720_1280_25fps.mp4",
         "force_rate": 0,
         "force_size": "Disabled",
         "custom_width": 512,
