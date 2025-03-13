@@ -166,7 +166,7 @@
         "Node name for S&R": "INPAINT_LoadInpaintModel"
       },
       "widgets_values": [
-        "big-lama.pt"
+        "MAT_Places512_G_fp16.safetensors"
       ]
     },
     {
