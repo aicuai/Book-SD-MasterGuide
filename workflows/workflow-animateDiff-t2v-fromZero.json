@@ -1,0 +1,789 @@
+{
+  "last_node_id": 13,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1751.5179443359375,
+        -203.07308959960938
+      ],
+      "size": [
+        219.3603515625,
+        523.3603515625
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "031c4ae301c9b6403e2f472eb91f0ff87bbb5385",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h265-mp4",
+        "pix_fmt": "yuv420p10le",
+        "crf": 22,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00016.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h265-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00016.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI/output/AnimateDiff_00016.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "type": "RIFE VFI",
+      "pos": [
+        1242.279052734375,
+        -63.04642868041992
+      ],
+      "size": [
+        478.8000183105469,
+        198
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-frame-interpolation",
+        "ver": "c336f7184cb1ac1243381e725fea1ad2c0a10c09",
+        "Node name for S&R": "RIFE VFI"
+      },
+      "widgets_values": [
+        "rife47.pth",
+        10,
+        4,
+        true,
+        true,
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "type": "VAEDecode",
+      "pos": [
+        1483.06982421875,
+        -285.2960510253906
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 9
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "KSampler",
+      "pos": [
+        1078.6370849609375,
+        -403.3069152832031
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 7
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        638357475081530,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "ADE_AnimateDiffLoaderGen1",
+      "pos": [
+        705.5130615234375,
+        -433.4727478027344
+      ],
+      "size": [
+        315,
+        242
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "shape": 7,
+          "link": 2
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "ad_settings",
+          "type": "AD_SETTINGS",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "ad_keyframes",
+          "type": "AD_KEYFRAMES",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "sample_settings",
+          "type": "SAMPLE_SETTINGS",
+          "shape": 7,
+          "link": 3
+        },
+        {
+          "name": "scale_multival",
+          "type": "MULTIVAL",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "effect_multival",
+          "type": "MULTIVAL",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "per_block",
+          "type": "PER_BLOCK",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "9f2d24d124082a028692ce6f6b94db77ffef8e8b",
+        "Node name for S&R": "ADE_AnimateDiffLoaderGen1"
+      },
+      "widgets_values": [
+        "hsxl_temporal_layers.f16.safetensors",
+        "autoselect"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ADE_ViewsOnlyContextOptions",
+      "pos": [
+        251.64878845214844,
+        -258.1109619140625
+      ],
+      "size": [
+        344.3999938964844,
+        102
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "view_opts_req",
+          "type": "VIEW_OPTS",
+          "link": 4
+        },
+        {
+          "name": "prev_context",
+          "type": "CONTEXT_OPTIONS",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "9f2d24d124082a028692ce6f6b94db77ffef8e8b",
+        "Node name for S&R": "ADE_ViewsOnlyContextOptions"
+      },
+      "widgets_values": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ADE_AnimateDiffSamplingSettings",
+      "pos": [
+        441.3716735839844,
+        -57.957794189453125
+      ],
+      "size": [
+        210,
+        298
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_layers",
+          "type": "NOISE_LAYERS",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "iteration_opts",
+          "type": "ITERATION_OPTS",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "custom_cfg",
+          "type": "CUSTOM_CFG",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "sigma_schedule",
+          "type": "SIGMA_SCHEDULE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "image_inject",
+          "type": "IMAGE_INJECT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "ancestral_opts",
+          "type": "ANCESTRAL_OPTS",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "seed_override",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "seed_override"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "settings",
+          "type": "SAMPLE_SETTINGS",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "9f2d24d124082a028692ce6f6b94db77ffef8e8b",
+        "Node name for S&R": "ADE_AnimateDiffSamplingSettings"
+      },
+      "widgets_values": [
+        0,
+        "default",
+        "comfy",
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ADE_StandardUniformViewOptions",
+      "pos": [
+        44.42362976074219,
+        -55.661956787109375
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIEW_OPTS",
+          "type": "VIEW_OPTS",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "9f2d24d124082a028692ce6f6b94db77ffef8e8b",
+        "Node name for S&R": "ADE_StandardUniformViewOptions"
+      },
+      "widgets_values": [
+        8,
+        1,
+        4,
+        "pyramid"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "EmptyLatentImage",
+      "pos": [
+        716.010009765625,
+        -59.13311767578125
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            8
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        24
+      ]
+    },
+    {
+      "id": 13,
+      "type": "CLIPTextEncode",
+      "pos": [
+        514.57763671875,
+        -719.6782836914062
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "worst quality"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        260.9791564941406,
+        -433.7503356933594
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            14,
+            15
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            16
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1009.9405517578125,
+        -705.6777954101562
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a girl is dancing"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      2,
+      0,
+      1,
+      1,
+      "CONTEXT_OPTIONS"
+    ],
+    [
+      3,
+      4,
+      0,
+      1,
+      5,
+      "SAMPLE_SETTINGS"
+    ],
+    [
+      4,
+      5,
+      0,
+      2,
+      0,
+      "VIEW_OPTS"
+    ],
+    [
+      6,
+      3,
+      0,
+      1,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      1,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      8,
+      8,
+      0,
+      7,
+      3,
+      "LATENT"
+    ],
+    [
+      9,
+      7,
+      0,
+      9,
+      0,
+      "LATENT"
+    ],
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      12,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      13,
+      0,
+      7,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      3,
+      1,
+      12,
+      0,
+      "CLIP"
+    ],
+    [
+      15,
+      3,
+      1,
+      13,
+      0,
+      "CLIP"
+    ],
+    [
+      16,
+      3,
+      2,
+      9,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9229599817706413,
+      "offset": [
+        -177.6272354117096,
+        692.3155618664949
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
