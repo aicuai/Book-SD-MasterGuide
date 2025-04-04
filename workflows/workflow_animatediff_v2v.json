@@ -1,18 +1,20 @@
 {
+  "id": "7a3226d7-db77-488b-8d0f-954d73419d22",
+  "revision": 0,
   "last_node_id": 29,
   "last_link_id": 56,
   "nodes": [
     {
       "id": 7,
       "type": "CLIPTextEncode",
-      "pos": {
-        "0": -90,
-        "1": 420
-      },
-      "size": {
-        "0": 425.27801513671875,
-        "1": 180.6060791015625
-      },
+      "pos": [
+        -90,
+        420
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
       "flags": {},
       "order": 6,
       "mode": 0,
@@ -27,13 +29,15 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             26
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
@@ -43,38 +47,40 @@
     {
       "id": 5,
       "type": "EmptyLatentImage",
-      "pos": {
-        "0": 473,
-        "1": 609
-      },
-      "size": {
-        "0": 315,
-        "1": 106
-      },
+      "pos": [
+        473,
+        609
+      ],
+      "size": [
+        315,
+        106
+      ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
           "name": "batch_size",
           "type": "INT",
-          "link": 16,
           "widget": {
             "name": "batch_size"
-          }
+          },
+          "link": 16
         }
       ],
       "outputs": [
         {
           "name": "LATENT",
           "type": "LATENT",
+          "slot_index": 0,
           "links": [
             2
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
@@ -86,14 +92,14 @@
     {
       "id": 6,
       "type": "CLIPTextEncode",
-      "pos": {
-        "0": -80,
-        "1": 220
-      },
-      "size": {
-        "0": 422.84503173828125,
-        "1": 164.31304931640625
-      },
+      "pos": [
+        -80,
+        220
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -108,13 +114,15 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             25
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
@@ -124,14 +132,14 @@
     {
       "id": 3,
       "type": "KSampler",
-      "pos": {
-        "0": 863,
-        "1": 186
-      },
-      "size": {
-        "0": 315,
-        "1": 474
-      },
+      "pos": [
+        863,
+        186
+      ],
+      "size": [
+        315,
+        474
+      ],
       "flags": {},
       "order": 18,
       "mode": 0,
@@ -161,17 +169,19 @@
         {
           "name": "LATENT",
           "type": "LATENT",
+          "slot_index": 0,
           "links": [
             41
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        842904564811483,
+        972549718205582,
         "randomize",
         4,
         2,
@@ -183,14 +193,14 @@
     {
       "id": 21,
       "type": "VAEDecode",
-      "pos": {
-        "0": 1219,
-        "1": 187
-      },
-      "size": {
-        "0": 210,
-        "1": 46
-      },
+      "pos": [
+        1219,
+        187
+      ],
+      "size": [
+        210,
+        46
+      ],
       "flags": {},
       "order": 19,
       "mode": 0,
@@ -210,101 +220,30 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             43
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "VAEDecode"
       },
       "widgets_values": []
     },
     {
-      "id": 11,
-      "type": "VHS_VideoCombine",
-      "pos": {
-        "0": 1521,
-        "1": 188
-      },
-      "size": [
-        474.7535095214844,
-        778.7535095214844
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 43
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": null,
-          "shape": 7
-        },
-        {
-          "name": "meta_batch",
-          "type": "VHS_BatchManager",
-          "link": null,
-          "shape": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": null,
-          "shape": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 24,
-        "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
-        "format": "video/h265-mp4",
-        "pix_fmt": "yuv420p10le",
-        "crf": 22,
-        "save_metadata": true,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "AnimateDiff_00019.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h265-mp4",
-            "frame_rate": 24
-          },
-          "muted": false
-        }
-      }
-    },
-    {
       "id": 17,
       "type": "ACN_AdvancedControlNetApply",
-      "pos": {
-        "0": -150,
-        "1": 940
-      },
-      "size": {
-        "0": 285.6000061035156,
-        "1": 286
-      },
+      "pos": [
+        -150,
+        940
+      ],
+      "size": [
+        285.6000061035156,
+        286
+      ],
       "flags": {},
       "order": 14,
       "mode": 0,
@@ -331,57 +270,57 @@
         },
         {
           "name": "mask_optional",
+          "shape": 7,
           "type": "MASK",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "timestep_kf",
+          "shape": 7,
           "type": "TIMESTEP_KEYFRAME",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "latent_kf_override",
+          "shape": 7,
           "type": "LATENT_KEYFRAME",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "weights_override",
+          "shape": 7,
           "type": "CONTROL_NET_WEIGHTS",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "model_optional",
+          "shape": 7,
           "type": "MODEL",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "vae_optional",
+          "shape": 7,
           "type": "VAE",
-          "link": 28,
-          "shape": 7
+          "link": 28
         }
       ],
       "outputs": [
         {
           "name": "positive",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             44
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
+          "slot_index": 1,
           "links": [
             45
-          ],
-          "slot_index": 1
+          ]
         },
         {
           "name": "model_opt",
@@ -390,49 +329,52 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-advanced-controlnet",
+        "ver": "da254b700db562a22e03358b933c85a9a3392540",
         "Node name for S&R": "ACN_AdvancedControlNetApply"
       },
       "widgets_values": [
         0.6,
         0,
-        1,
-        ""
+        1
       ]
     },
     {
       "id": 16,
       "type": "ControlNetLoaderAdvanced",
-      "pos": {
-        "0": -530,
-        "1": 1190
-      },
-      "size": {
-        "0": 327.6000061035156,
-        "1": 58
-      },
+      "pos": [
+        -530,
+        1190
+      ],
+      "size": [
+        327.6000061035156,
+        58
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
       "inputs": [
         {
           "name": "tk_optional",
+          "shape": 7,
           "type": "TIMESTEP_KEYFRAME",
-          "link": null,
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
         {
           "name": "CONTROL_NET",
           "type": "CONTROL_NET",
+          "slot_index": 0,
           "links": [
             27,
             46
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-advanced-controlnet",
+        "ver": "da254b700db562a22e03358b933c85a9a3392540",
         "Node name for S&R": "ControlNetLoaderAdvanced"
       },
       "widgets_values": [
@@ -442,16 +384,16 @@
     {
       "id": 18,
       "type": "DWPreprocessor",
-      "pos": {
-        "0": -900,
-        "1": 1000
-      },
-      "size": {
-        "0": 315,
-        "1": 222
-      },
+      "pos": [
+        -900,
+        1000
+      ],
+      "size": [
+        315,
+        222
+      ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -464,11 +406,11 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             34,
             36
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "POSE_KEYPOINT",
@@ -477,6 +419,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
         "Node name for S&R": "DWPreprocessor"
       },
       "widgets_values": [
@@ -492,16 +436,16 @@
     {
       "id": 20,
       "type": "ImageResizeKJ",
-      "pos": {
-        "0": -1290,
-        "1": 1000
-      },
-      "size": {
-        "0": 315,
-        "1": 266
-      },
+      "pos": [
+        -1290,
+        1000
+      ],
+      "size": [
+        315,
+        266
+      ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -511,38 +455,38 @@
         },
         {
           "name": "get_image_size",
+          "shape": 7,
           "type": "IMAGE",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "width_input",
+          "shape": 7,
           "type": "INT",
-          "link": null,
           "widget": {
             "name": "width_input"
           },
-          "shape": 7
+          "link": null
         },
         {
           "name": "height_input",
+          "shape": 7,
           "type": "INT",
-          "link": null,
           "widget": {
             "name": "height_input"
           },
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             38,
             47
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "width",
@@ -556,6 +500,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "402124d5c4154c29a9c44f73315044bc02702d71",
         "Node name for S&R": "ImageResizeKJ"
       },
       "widgets_values": [
@@ -572,14 +518,14 @@
     {
       "id": 4,
       "type": "CheckpointLoaderSimple",
-      "pos": {
-        "0": -540,
-        "1": 500
-      },
-      "size": {
-        "0": 315,
-        "1": 98
-      },
+      "pos": [
+        -540,
+        500
+      ],
+      "size": [
+        315,
+        98
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -588,32 +534,34 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             10
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 1,
           "links": [
             3,
             5
-          ],
-          "slot_index": 1
+          ]
         },
         {
           "name": "VAE",
           "type": "VAE",
+          "slot_index": 2,
           "links": [
             28,
             42,
             49
-          ],
-          "slot_index": 2
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
@@ -623,16 +571,16 @@
     {
       "id": 23,
       "type": "DepthAnythingV2Preprocessor",
-      "pos": {
-        "0": -888,
-        "1": 1306
-      },
-      "size": {
-        "0": 265.53143310546875,
-        "1": 82
-      },
+      "pos": [
+        -888,
+        1306
+      ],
+      "size": [
+        265.53143310546875,
+        82
+      ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -645,14 +593,16 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             48,
             52
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
         "Node name for S&R": "DepthAnythingV2Preprocessor"
       },
       "widgets_values": [
@@ -663,14 +613,14 @@
     {
       "id": 22,
       "type": "ACN_AdvancedControlNetApply",
-      "pos": {
-        "0": 490,
-        "1": 939
-      },
-      "size": {
-        "0": 285.6000061035156,
-        "1": 286
-      },
+      "pos": [
+        490,
+        939
+      ],
+      "size": [
+        285.6000061035156,
+        286
+      ],
       "flags": {},
       "order": 17,
       "mode": 0,
@@ -697,57 +647,57 @@
         },
         {
           "name": "mask_optional",
+          "shape": 7,
           "type": "MASK",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "timestep_kf",
+          "shape": 7,
           "type": "TIMESTEP_KEYFRAME",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "latent_kf_override",
+          "shape": 7,
           "type": "LATENT_KEYFRAME",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "weights_override",
+          "shape": 7,
           "type": "CONTROL_NET_WEIGHTS",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "model_optional",
+          "shape": 7,
           "type": "MODEL",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "vae_optional",
+          "shape": 7,
           "type": "VAE",
-          "link": 49,
-          "shape": 7
+          "link": 49
         }
       ],
       "outputs": [
         {
           "name": "positive",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             50
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
+          "slot_index": 1,
           "links": [
             51
-          ],
-          "slot_index": 1
+          ]
         },
         {
           "name": "model_opt",
@@ -756,110 +706,26 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-advanced-controlnet",
+        "ver": "da254b700db562a22e03358b933c85a9a3392540",
         "Node name for S&R": "ACN_AdvancedControlNetApply"
       },
       "widgets_values": [
         0.3,
         0,
-        0.5,
-        ""
+        0.5
       ]
-    },
-    {
-      "id": 13,
-      "type": "VHS_LoadVideo",
-      "pos": {
-        "0": -1590,
-        "1": 910
-      },
-      "size": [
-        252.056640625,
-        688.5451388888889
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "meta_batch",
-          "type": "VHS_BatchManager",
-          "link": null,
-          "shape": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": null,
-          "shape": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            37
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": [
-            16
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "links": null
-        },
-        {
-          "name": "video_info",
-          "type": "VHS_VIDEOINFO",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadVideo"
-      },
-      "widgets_values": {
-        "video": "man_dancing_720_1280_25fps.mp4",
-        "force_rate": 0,
-        "force_size": "Disabled",
-        "custom_width": 512,
-        "custom_height": 512,
-        "frame_load_cap": 120,
-        "skip_first_frames": 0,
-        "select_every_nth": 1,
-        "choose video to upload": "image",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "frame_load_cap": 120,
-            "skip_first_frames": 0,
-            "force_rate": 0,
-            "select_every_nth": 1,
-            "filename": "2795746-uhd_2160_3840_25fps.mp4",
-            "type": "input",
-            "format": "video/mp4"
-          },
-          "muted": false
-        }
-      }
     },
     {
       "id": 19,
       "type": "VHS_VideoCombine",
-      "pos": {
-        "0": 50,
-        "1": 1332
-      },
+      "pos": [
+        50,
+        1332
+      ],
       "size": [
         474.7535095214844,
-        310
+        1082.5146484375
       ],
       "flags": {},
       "order": 15,
@@ -872,21 +738,21 @@
         },
         {
           "name": "audio",
+          "shape": 7,
           "type": "AUDIO",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "meta_batch",
+          "shape": 7,
           "type": "VHS_BatchManager",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "vae",
+          "shape": 7,
           "type": "VAE",
-          "link": null,
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
@@ -897,6 +763,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "7236c5dff09e64dcf8d5946f93d4d7fc4f1a6147",
         "Node name for S&R": "VHS_VideoCombine"
       },
       "widgets_values": {
@@ -913,11 +781,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_DWPose_00004.mp4",
+            "filename": "AnimateDiff_DWPose_00001.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h265-mp4",
-            "frame_rate": 24
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_DWPose_00001.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI/output/AnimateDiff_DWPose_00001.mp4"
           },
           "muted": false
         }
@@ -926,13 +796,13 @@
     {
       "id": 24,
       "type": "VHS_VideoCombine",
-      "pos": {
-        "0": -542,
-        "1": 1425
-      },
+      "pos": [
+        -542,
+        1425
+      ],
       "size": [
         474.7535095214844,
-        310
+        1082.5146484375
       ],
       "flags": {},
       "order": 16,
@@ -945,21 +815,21 @@
         },
         {
           "name": "audio",
+          "shape": 7,
           "type": "AUDIO",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "meta_batch",
+          "shape": 7,
           "type": "VHS_BatchManager",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "vae",
+          "shape": 7,
           "type": "VAE",
-          "link": null,
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
@@ -970,6 +840,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "7236c5dff09e64dcf8d5946f93d4d7fc4f1a6147",
         "Node name for S&R": "VHS_VideoCombine"
       },
       "widgets_values": {
@@ -986,11 +858,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_Depth_00002.mp4",
+            "filename": "AnimateDiff_Depth_00001.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h265-mp4",
-            "frame_rate": 24
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_Depth_00001.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI/output/AnimateDiff_Depth_00001.mp4"
           },
           "muted": false
         }
@@ -999,16 +873,16 @@
     {
       "id": 25,
       "type": "ADE_ViewsOnlyContextOptions",
-      "pos": {
-        "0": 20,
-        "1": -290
-      },
+      "pos": [
+        20,
+        -290
+      ],
       "size": [
         344.3999938964844,
         102
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -1018,9 +892,9 @@
         },
         {
           "name": "prev_context",
+          "shape": 7,
           "type": "CONTEXT_OPTIONS",
-          "link": null,
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
@@ -1033,6 +907,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "3795f515b8faa1f4cfd9393a50cdcca299a68993",
         "Node name for S&R": "ADE_ViewsOnlyContextOptions"
       },
       "widgets_values": [
@@ -1043,29 +919,31 @@
     {
       "id": 27,
       "type": "ADE_StandardUniformViewOptions",
-      "pos": {
-        "0": -402,
-        "1": -291
-      },
+      "pos": [
+        -402,
+        -291
+      ],
       "size": [
-        371.6195298345024,
+        371.6195373535156,
         130
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "VIEW_OPTS",
           "type": "VIEW_OPTS",
+          "slot_index": 0,
           "links": [
             54
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "3795f515b8faa1f4cfd9393a50cdcca299a68993",
         "Node name for S&R": "ADE_StandardUniformViewOptions"
       },
       "widgets_values": [
@@ -1078,16 +956,16 @@
     {
       "id": 10,
       "type": "ADE_AnimateDiffLoaderGen1",
-      "pos": {
-        "0": 460,
-        "1": -121
-      },
-      "size": {
-        "0": 327.5999755859375,
-        "1": 242
-      },
+      "pos": [
+        460,
+        -121
+      ],
+      "size": [
+        327.5999755859375,
+        242
+      ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -1097,64 +975,66 @@
         },
         {
           "name": "context_options",
+          "shape": 7,
           "type": "CONTEXT_OPTIONS",
-          "link": 53,
-          "shape": 7
+          "link": 53
         },
         {
           "name": "motion_lora",
+          "shape": 7,
           "type": "MOTION_LORA",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "ad_settings",
+          "shape": 7,
           "type": "AD_SETTINGS",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "ad_keyframes",
+          "shape": 7,
           "type": "AD_KEYFRAMES",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "sample_settings",
+          "shape": 7,
           "type": "SAMPLE_SETTINGS",
-          "link": 55,
-          "shape": 7
+          "link": 55
         },
         {
           "name": "scale_multival",
+          "shape": 7,
           "type": "MULTIVAL",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "effect_multival",
+          "shape": 7,
           "type": "MULTIVAL",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "per_block",
+          "shape": 7,
           "type": "PER_BLOCK",
-          "link": null,
-          "shape": 7
+          "link": null
         }
       ],
       "outputs": [
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             11
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "3795f515b8faa1f4cfd9393a50cdcca299a68993",
         "Node name for S&R": "ADE_AnimateDiffLoaderGen1"
       },
       "widgets_values": [
@@ -1165,56 +1045,62 @@
     {
       "id": 28,
       "type": "ADE_AnimateDiffSamplingSettings",
-      "pos": {
-        "0": 106,
-        "1": -102
-      },
-      "size": {
-        "0": 220,
-        "1": 254
-      },
+      "pos": [
+        106,
+        -102
+      ],
+      "size": [
+        220,
+        290
+      ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
           "name": "noise_layers",
+          "shape": 7,
           "type": "NOISE_LAYERS",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "iteration_opts",
+          "shape": 7,
           "type": "ITERATION_OPTS",
-          "link": 56,
-          "shape": 7
+          "link": 56
         },
         {
           "name": "custom_cfg",
+          "shape": 7,
           "type": "CUSTOM_CFG",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "sigma_schedule",
+          "shape": 7,
           "type": "SIGMA_SCHEDULE",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "image_inject",
+          "shape": 7,
           "type": "IMAGE_INJECT",
-          "link": null,
-          "shape": 7
+          "link": null
         },
         {
           "name": "seed_override",
+          "shape": 7,
           "type": "INT",
-          "link": null,
           "widget": {
             "name": "seed_override"
           },
-          "shape": 7
+          "link": null
+        },
+        {
+          "name": "ancestral_opts",
+          "shape": 7,
+          "type": "ANCESTRAL_OPTS",
+          "link": null
         }
       ],
       "outputs": [
@@ -1227,6 +1113,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "3795f515b8faa1f4cfd9393a50cdcca299a68993",
         "Node name for S&R": "ADE_AnimateDiffSamplingSettings"
       },
       "widgets_values": [
@@ -1235,23 +1123,22 @@
         "comfy",
         0,
         0,
-        false,
-        ""
+        false
       ]
     },
     {
       "id": 29,
       "type": "ADE_IterationOptsFreeInit",
-      "pos": {
-        "0": -431,
-        "1": -81
-      },
-      "size": {
-        "0": 332.20001220703125,
-        "1": 274
-      },
+      "pos": [
+        -431,
+        -81
+      ],
+      "size": [
+        332.20001220703125,
+        274
+      ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1264,6 +1151,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui-animatediff-evolved",
+        "ver": "3795f515b8faa1f4cfd9393a50cdcca299a68993",
         "Node name for S&R": "ADE_IterationOptsFreeInit"
       },
       "widgets_values": [
@@ -1276,9 +1165,172 @@
         false,
         "FreeInit [sampler sigma]",
         0,
-        1,
-        ""
+        1
       ]
+    },
+    {
+      "id": 13,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -1590,
+        910
+      ],
+      "size": [
+        252.056640625,
+        711.094482421875
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "slot_index": 1,
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "7236c5dff09e64dcf8d5946f93d4d7fc4f1a6147",
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "768x1280@24fps.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 24,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 24,
+            "skip_first_frames": 0,
+            "force_rate": 0,
+            "select_every_nth": 1,
+            "filename": "768x1280@24fps.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          },
+          "muted": false
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1521,
+        188
+      ],
+      "size": [
+        474.7535095214844,
+        1081.9224853515625
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 43
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "7236c5dff09e64dcf8d5946f93d4d7fc4f1a6147",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h265-mp4",
+        "pix_fmt": "yuv420p10le",
+        "crf": 22,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h265-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00001.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI/output/AnimateDiff_00001.mp4"
+          },
+          "muted": false
+        }
+      }
     }
   ],
   "links": [
@@ -1527,12 +1579,16 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5131581182307067,
+      "scale": 0.6209213230591555,
       "offset": [
-        1338.3058120272678,
-        -1.6004621696288104
+        1219.2968934992584,
+        -182.7304964820728
       ]
-    }
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
