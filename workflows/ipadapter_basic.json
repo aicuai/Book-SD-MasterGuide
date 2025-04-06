@@ -5,14 +5,14 @@
     {
       "id": 115,
       "type": "VAEDecode",
-      "pos": {
-        "0": 3303,
-        "1": 841
-      },
-      "size": {
-        "0": 210,
-        "1": 46
-      },
+      "pos": [
+        3303,
+        841
+      ],
+      "size": [
+        210,
+        46
+      ],
       "flags": {},
       "order": 9,
       "mode": 0,
@@ -41,19 +41,20 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecode"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 113,
       "type": "LoadImage",
-      "pos": {
-        "0": 1510,
-        "1": 1670
-      },
-      "size": {
-        "0": 315,
-        "1": 314
-      },
+      "pos": [
+        1510,
+        1670
+      ],
+      "size": [
+        315,
+        314
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -86,12 +87,12 @@
     {
       "id": 117,
       "type": "EmptyLatentImage",
-      "pos": {
-        "0": 2581,
-        "1": 1121
-      },
+      "pos": [
+        2581,
+        1121
+      ],
       "size": [
-        260.689412363281,
+        260.6894226074219,
         106
       ],
       "flags": {},
@@ -118,70 +119,18 @@
       ]
     },
     {
-      "id": 106,
-      "type": "CheckpointLoaderSimple",
-      "pos": {
-        "0": 1242,
-        "1": 1023
-      },
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            254
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            246,
-            247
-          ],
-          "slot_index": 1,
-          "shape": 3
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            260
-          ],
-          "slot_index": 2,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "RealVisXL_V5.0_fp16.safetensors"
-      ]
-    },
-    {
       "id": 108,
       "type": "CLIPTextEncode",
-      "pos": {
-        "0": 1839,
-        "1": 1043
-      },
-      "size": {
-        "0": 400,
-        "1": 200
-      },
+      "pos": [
+        1839,
+        1043
+      ],
+      "size": [
+        400,
+        200
+      ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -211,14 +160,14 @@
     {
       "id": 109,
       "type": "KSampler",
-      "pos": {
-        "0": 2898,
-        "1": 841
-      },
-      "size": {
-        "0": 315,
-        "1": 474
-      },
+      "pos": [
+        2898,
+        841
+      ],
+      "size": [
+        315,
+        474
+      ],
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -271,16 +220,16 @@
     {
       "id": 107,
       "type": "CLIPTextEncode",
-      "pos": {
-        "0": 1841,
-        "1": 777
-      },
-      "size": {
-        "0": 400,
-        "1": 200
-      },
+      "pos": [
+        1841,
+        777
+      ],
+      "size": [
+        400,
+        200
+      ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -310,16 +259,16 @@
     {
       "id": 112,
       "type": "IPAdapterModelLoader",
-      "pos": {
-        "0": 1480,
-        "1": 1430
-      },
-      "size": {
-        "0": 315,
-        "1": 58
-      },
+      "pos": [
+        1480,
+        1430
+      ],
+      "size": [
+        315,
+        58
+      ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -340,47 +289,15 @@
       ]
     },
     {
-      "id": 114,
-      "type": "CLIPVisionLoader",
-      "pos": {
-        "0": 1480,
-        "1": 1550
-      },
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            258
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
-      },
-      "widgets_values": [
-        "\nCLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
-      ]
-    },
-    {
       "id": 116,
       "type": "SaveImage",
-      "pos": {
-        "0": 3639,
-        "1": 841
-      },
+      "pos": [
+        3639,
+        841
+      ],
       "size": [
-        395.96956464843834,
-        400.8749281250002
+        395.9695739746094,
+        400.87493896484375
       ],
       "flags": {},
       "order": 10,
@@ -401,16 +318,16 @@
     {
       "id": 111,
       "type": "IPAdapterAdvanced",
-      "pos": {
-        "0": 1920,
-        "1": 1340
-      },
-      "size": {
-        "0": 315,
-        "1": 278
-      },
+      "pos": [
+        1920,
+        1340
+      ],
+      "size": [
+        315,
+        278
+      ],
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -431,17 +348,20 @@
         {
           "name": "image_negative",
           "type": "IMAGE",
-          "link": null
+          "link": null,
+          "shape": 7
         },
         {
           "name": "attn_mask",
           "type": "MASK",
-          "link": null
+          "link": null,
+          "shape": 7
         },
         {
           "name": "clip_vision",
           "type": "CLIP_VISION",
-          "link": 258
+          "link": 258,
+          "shape": 7
         }
       ],
       "outputs": [
@@ -465,6 +385,90 @@
         0,
         1,
         "V only"
+      ]
+    },
+    {
+      "id": 114,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        1480,
+        1550
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            258
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1242,
+        1023
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            254
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            246,
+            247
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            260
+          ],
+          "slot_index": 2,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "RealVisXL_V5.0_Lightning_fp16.safetensors"
       ]
     }
   ],
@@ -578,12 +582,21 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537773,
-      "offset": {
-        "0": -1023.8399047851562,
-        "1": -749.3349609375
-      }
-    }
+      "scale": 0.5644739300537774,
+      "offset": [
+        -984.5296378617729,
+        -524.0134849014662
+      ]
+    },
+    "node_versions": {
+      "comfy-core": "unknown",
+      "comfyui_ipadapter_plus": "9d076a3df0d2763cef5510ec5ab807f6632c39f5"
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
