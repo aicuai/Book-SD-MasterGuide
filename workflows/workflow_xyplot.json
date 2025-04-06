@@ -1,61 +1,20 @@
 {
+  "id": "31fe30ff-f6dc-4a8a-8575-a71cfb06e506",
+  "revision": 0,
   "last_node_id": 16,
   "last_link_id": 18,
   "nodes": [
     {
-      "id": 16,
-      "type": "SaveImage",
-      "pos": {
-        "0": 1605,
-        "1": 106,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
-      "size": {
-        "0": 399.8549499511719,
-        "1": 380.5924072265625
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 18
-        }
-      ],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "ComfyUI"
-      ]
-    },
-    {
       "id": 15,
       "type": "XY Input: Prompt S/R",
-      "pos": {
-        "0": 325,
-        "1": 886,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
-      "size": {
-        "0": 315,
-        "1": 178
-      },
+      "pos": [
+        325,
+        886
+      ],
+      "size": [
+        315,
+        178
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -63,15 +22,17 @@
       "outputs": [
         {
           "name": "X or Y",
+          "shape": 3,
           "type": "XY",
+          "slot_index": 0,
           "links": [
             17
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
         "Node name for S&R": "XY Input: Prompt S/R"
       },
       "widgets_values": [
@@ -135,21 +96,13 @@
     {
       "id": 14,
       "type": "XY Input: Prompt S/R",
-      "pos": {
-        "0": 226,
-        "1": 599,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
+      "pos": [
+        226,
+        599
+      ],
       "size": [
         320,
-        180
+        178
       ],
       "flags": {},
       "order": 1,
@@ -158,15 +111,17 @@
       "outputs": [
         {
           "name": "X or Y",
+          "shape": 3,
           "type": "XY",
+          "slot_index": 0,
           "links": [
             16
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
         "Node name for S&R": "XY Input: Prompt S/R"
       },
       "widgets_values": [
@@ -228,35 +183,120 @@
       "shape": 1
     },
     {
+      "id": 13,
+      "type": "XY Plot",
+      "pos": [
+        755,
+        579
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dependencies",
+          "shape": 7,
+          "type": "DEPENDENCIES",
+          "link": 14
+        },
+        {
+          "name": "X",
+          "shape": 7,
+          "type": "XY",
+          "link": 16
+        },
+        {
+          "name": "Y",
+          "shape": 7,
+          "type": "XY",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCRIPT",
+          "shape": 3,
+          "type": "SCRIPT",
+          "slot_index": 0,
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
+        "Node name for S&R": "XY Plot"
+      },
+      "widgets_values": [
+        0,
+        "False",
+        "Vertical",
+        "True",
+        "Plot"
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": [
+        1605,
+        106
+      ],
+      "size": [
+        399.8549499511719,
+        380.5924072265625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
       "id": 10,
       "type": "Eff. Loader SDXL",
-      "pos": {
-        "0": 286,
-        "1": 44,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
-      "size": {
-        "0": 400,
-        "1": 402
-      },
+      "pos": [
+        286,
+        44
+      ],
+      "size": [
+        400,
+        418
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
       "inputs": [
         {
           "name": "lora_stack",
+          "shape": 7,
           "type": "LORA_STACK",
           "link": null
         },
         {
           "name": "cnet_stack",
+          "shape": 7,
           "type": "CONTROL_NET_STACK",
           "link": null
         }
@@ -264,42 +304,44 @@
       "outputs": [
         {
           "name": "SDXL_TUPLE",
+          "shape": 3,
           "type": "SDXL_TUPLE",
+          "slot_index": 0,
           "links": [
             10
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         },
         {
           "name": "LATENT",
+          "shape": 3,
           "type": "LATENT",
+          "slot_index": 1,
           "links": [
             11
-          ],
-          "slot_index": 1,
-          "shape": 3
+          ]
         },
         {
           "name": "VAE",
+          "shape": 3,
           "type": "VAE",
+          "slot_index": 2,
           "links": [
             12
-          ],
-          "slot_index": 2,
-          "shape": 3
+          ]
         },
         {
           "name": "DEPENDENCIES",
+          "shape": 3,
           "type": "DEPENDENCIES",
+          "slot_index": 3,
           "links": [
             14
-          ],
-          "slot_index": 3,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
         "Node name for S&R": "Eff. Loader SDXL"
       },
       "widgets_values": [
@@ -310,7 +352,7 @@
         6,
         2,
         "Baked VAE",
-        "best quality, 1girl, solo, long_hair, smile, casual dress, very_long_hair, blonde_hair, standing relaxed, portrait, ",
+        "masterpiece, 1girl, solo, long_hair, smile, casual dress, very_long_hair, blonde_hair, standing relaxed, portrait, photorealism, 8k, ultra-detailed, ",
         "text, watermark,",
         "none",
         "comfy",
@@ -325,22 +367,14 @@
     {
       "id": 11,
       "type": "KSampler SDXL (Eff.)",
-      "pos": {
-        "0": 1149,
-        "1": 45,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
-      "size": {
-        "0": 325,
-        "1": 546
-      },
+      "pos": [
+        1149,
+        45
+      ],
+      "size": [
+        325,
+        546
+      ],
       "flags": {},
       "order": 4,
       "mode": 0,
@@ -357,11 +391,13 @@
         },
         {
           "name": "optional_vae",
+          "shape": 7,
           "type": "VAE",
           "link": 12
         },
         {
           "name": "script",
+          "shape": 7,
           "type": "SCRIPT",
           "link": 15
         }
@@ -369,37 +405,39 @@
       "outputs": [
         {
           "name": "SDXL_TUPLE",
+          "shape": 3,
           "type": "SDXL_TUPLE",
-          "links": null,
-          "shape": 3
+          "links": null
         },
         {
           "name": "LATENT",
+          "shape": 3,
           "type": "LATENT",
-          "links": null,
-          "shape": 3
+          "links": null
         },
         {
           "name": "VAE",
+          "shape": 3,
           "type": "VAE",
-          "links": null,
-          "shape": 3
+          "links": null
         },
         {
           "name": "IMAGE",
+          "shape": 3,
           "type": "IMAGE",
+          "slot_index": 3,
           "links": [
             18
-          ],
-          "slot_index": 3,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "efficiency-nodes-comfyui",
+        "ver": "9e3c5aa4976ad457065ef06a0dfdfc66e17c59ee",
         "Node name for S&R": "KSampler SDXL (Eff.)"
       },
       "widgets_values": [
-        275067326320298,
+        275067326320310,
         null,
         20,
         7,
@@ -408,74 +446,11 @@
         0,
         -1,
         "auto",
-        "true"
+        "true",
+        ""
       ],
       "color": "#222233",
       "bgcolor": "#333355",
-      "shape": 1
-    },
-    {
-      "id": 13,
-      "type": "XY Plot",
-      "pos": {
-        "0": 755,
-        "1": 579,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0,
-        "7": 0,
-        "8": 0,
-        "9": 0
-      },
-      "size": {
-        "0": 315,
-        "1": 194
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "dependencies",
-          "type": "DEPENDENCIES",
-          "link": 14
-        },
-        {
-          "name": "X",
-          "type": "XY",
-          "link": 16
-        },
-        {
-          "name": "Y",
-          "type": "XY",
-          "link": 17
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SCRIPT",
-          "type": "SCRIPT",
-          "links": [
-            15
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "XY Plot"
-      },
-      "widgets_values": [
-        0,
-        "False",
-        "Vertical",
-        "True",
-        "Plot"
-      ],
-      "color": "#332233",
-      "bgcolor": "#553355",
       "shape": 1
     }
   ],
@@ -550,11 +525,15 @@
   "extra": {
     "ds": {
       "scale": 0.9090909090909091,
-      "offset": {
-        "0": -255.81626892089844,
-        "1": 15.492198944091797
-      }
-    }
+      "offset": [
+        38.594251055754285,
+        96.25243481429061
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
