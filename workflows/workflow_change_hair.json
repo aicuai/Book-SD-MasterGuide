@@ -1519,7 +1519,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "realvisxlV50_v50LightningBakedvae.safetensors"
+        "realvisxlInpainting_v5lightning.safetensors"
       ]
     },
     {
