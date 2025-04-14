@@ -104,7 +104,7 @@
         "Node name for S&R": "ControlNetLoader"
       },
       "widgets_values": [
-        "controlnet-union-sdxl-1.0-pro.safetensors"
+        "controlnet-union-sdxl-1.0-promax.safetensors"
       ]
     },
     {
