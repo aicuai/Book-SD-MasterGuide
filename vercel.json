@@ -4,12 +4,6 @@
         "src": "build.py",
         "use": "@vercel/python"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/public/$1"
-      }
     ]
   }
   
