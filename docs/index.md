@@ -114,3 +114,120 @@ AICU社では、単に画像を生成するだけでなく、広告、キャラ�
 ## 謝辞
 
 
+謝辞
+本書の執筆にあたりお世話になった方々（敬称略）
+美麗な表紙、装丁、作例をご提供いただいたアーティストのみなさま
+Stability AI Ltd、Stability AI Japanのみなさま
+Jerry Chi （ジェリー チー）、Minoru Saito、Naomi Isozaki、Meng Lee
+デジタルハリウッド大学 杉山知之 池谷和浩 事務局の皆様 クリエイティブAIラボ
+レビューにご参加いただいた皆様
+澤田藤洋仁 GMOインターネットグループ株式会社 上倉佑介
+トイメディアデザイン 森山弘樹 合同会社ブンシン 安藤直紀 ADK myousuke
+正木
+University of Alaska Fairbanks 青木美穂
+久米祐一郎 竹島由里子 床井浩平 宮田一乘 三宅陽一郎 草原真知子
+AICU Inc. 徳田浩司 インターンの皆様 HEAVEN Koto LuC4 ChaTaxAI
+AICU協力クリエイターのみなさま 852話 9食委員
+AICUmedia執筆チーム 知山ことね QA チーム Lucas.whitewell
+家族。傘寿米寿を超えて健康な両親。息子たち。いつも徹夜を見守ってきた妻・久美子。
+すべてのグラフィックスに関わる研究者、開発者、アーティスト、
+そして、すべての美と芸と技と表現を愛する人たちへ。 感謝と共に。
+白井暁彦
+2
+AI-Guide_000-000_shaji(01)-01.indd 2 AI-Guide_000-000_shaji(01)-01.indd 2 2025/03/24 11:58 2025/03/24 11:58
+
+白井暁彦
+martina.
+
+
+
+
+
+白井暁彦
+
+
+
+森　徹郎
+lucas.whitewell
+
+
+
+
+
+
+
+
+
+
+
+lucas.whitewell
+
+
+lucas.whitewell
+
+lucas.whitewell
+　内藤孝洋
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ないとっち（内藤孝洋）
+
+
+
+
+
+
+
+内藤孝洋（ないとっち）
+Yas
+Yas
+
+Yas
+Yas
+
+内藤孝洋（ないとっち）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lucas.whitewell
+
+
+
+
+
+
+
+
+
+内藤孝洋（ないとっち）
+martina.
+殻尾(からびー) — 昨日 19:00
