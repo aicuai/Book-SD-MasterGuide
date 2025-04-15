@@ -1,4 +1,4 @@
-—
+---
 title: 「ComfyUI紫本」配本開始日の変更とイベント開催について
 slug: new-release-date
 excerpt: 「画像・動画生成AI　ComfyUI マスターガイド」配本開始が2025年5月9日になる予定です。
@@ -9,7 +9,7 @@ author:
   picture: https://assets.st-note.com/production/uploads/images/174712619/rectangle_large_type_2_737e350e4f7c02534c52b64d366ccf36.png
 ogImage:
   url: https://assets.st-note.com/production/uploads/images/174712619/rectangle_large_type_2_737e350e4f7c02534c52b64d366ccf36.png
-—
+---
 
 2025年4月18日発売開始予定でアナウンスしておりました
 「画像・動画生成AI　ComfyUI マスターガイド」ですが、より最新の内容の反映と、品質向上、またゴールデンウィーク中の配本関係により、発売予定日(配本開始日)を5月9日に変更することが予定されております。

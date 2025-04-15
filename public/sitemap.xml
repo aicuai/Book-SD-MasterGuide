@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://comfy.aicu.ai/</loc>
-         <lastmod>2025-02-20</lastmod>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
          <loc>https://comfy.aicu.ai/blog/</loc>
-         <lastmod>2025-02-20</lastmod>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
          <loc>https://comfy.aicu.ai/blog/2025/02/15/new-release/</loc>
-         <lastmod>2025-02-20</lastmod>
+         <lastmod>2025-04-15</lastmod>
+    </url>
+    <url>
+         <loc>https://comfy.aicu.ai/blog/2025/04/15/new-release-date/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
          <loc>https://comfy.aicu.ai/blog/archive/2025/</loc>
-         <lastmod>2025-02-20</lastmod>
+         <lastmod>2025-04-15</lastmod>
     </url>
 </urlset>
