@@ -2,30 +2,31 @@ import subprocess
 import shutil
 import os
 
-print("📦 Cleaning existing build directories...")
+print("📦 Cleaning build directories...")
 
 # Clean local public/
 if os.path.exists("public"):
-    print("🧹 Removing local public/ directory")
+    print("🧹 Removing local public/")
     shutil.rmtree("public")
 
-# Clean Vercel output/static
-output_path = "/vercel/output/static"
-if os.path.exists(output_path):
-    print("🧹 Removing /vercel/output/static")
-    shutil.rmtree(output_path)
-
-print("🔧 Installing requirements...")
+# MkDocs build
+print("🔧 Installing dependencies...")
 subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
 
-print("🛠 Building MkDocs site...")
+print("🏗 Building mkdocs...")
 subprocess.run(["mkdocs", "build", "-d", "public"], check=True)
 
-print("📁 Contents of public/:")
-print(os.listdir("public"))
+# Check result
+print("📁 public/ contains:", os.listdir("public"))
 
-print(f"📤 Copying public/ → {output_path}")
+# Ensure /vercel/output/static/ exists and is clean
+output_path = "/vercel/output/static"
+print(f"📤 Copying to {output_path}")
+if os.path.exists(output_path):
+    shutil.rmtree(output_path)
+
 shutil.copytree("public", output_path)
 
-print("✅ Copy complete! Contents of /vercel/output/static:")
+print("✅ Done! Output now in /vercel/output/static:")
 print(os.listdir(output_path))
+print("🚀 Ready for deployment!")
