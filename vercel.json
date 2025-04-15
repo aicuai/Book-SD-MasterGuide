@@ -1,8 +1,8 @@
 {
     "builds": [
       {
-        "src": "build.py",
-        "use": "@vercel/python"
+        "src": "public/**/*",
+        "use": "@vercel/static"
       }
     ]
   }
