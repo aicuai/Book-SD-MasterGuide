@@ -4,7 +4,6 @@
         "src": "build.py",
         "use": "@vercel/python"
       }
-    ],
-    "outputDirectory": "public"
+    ]
   }
   
