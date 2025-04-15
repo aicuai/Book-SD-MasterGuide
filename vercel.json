@@ -1,22 +1,15 @@
 {
     "builds": [
-        {
-            "src": "requirements.txt",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "public",
-                "buildCommand": "mkdocs build -d public"
-            }
-        }
+      {
+        "src": "build.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/public/$1"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
+      }
     ]
-}
+  }
+  
