@@ -3,8 +3,8 @@ import shutil
 import os
 
 # Clean public/ directory if it exists
-if os.path.exists("public"):
-    shutil.rmtree("public")
+#if os.path.exists("public"):
+#    shutil.rmtree("public")
 
 # Install Python dependencies
 subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
