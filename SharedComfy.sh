@@ -58,3 +58,9 @@ wget -c https://huggingface.co/guoyww/animatediff/resolve/main/mm_sdxl_v10_beta.
 # AnimateDiff: HotshotXL
 wget -c https://huggingface.co/hotshotco/Hotshot-XL/resolve/main/hsxl_temporal_layers.f16.safetensors -P ./models/animatediff_models
 
+# AICU Official LoRAs
+wget -c "https://huggingface.co/AICU/SDXL-LoRA/resolve/main/znk-SDXL.safetensors" -O ./models/loras/znk-SDXL.safetensors
+wget -c "https://huggingface.co/AICU/SDXL-LoRA/resolve/main/znk-AnimagineXL4.safetensors" -O ./models/loras/znk-AnimagineXL4.safetensors
+wget -c "https://huggingface.co/AICU/SDXL-LoRA/resolve/main/Deltamon-AnimagineXL4.safetensors" -O ./models/loras/Deltamon-AnimagineXL4.safetensors
+wget -c "https://huggingface.co/AICU/SDXL-LoRA/resolve/main/9shoku0219-AnimagineXL4.safetensors" -O ./models/loras/9shoku0219-AnimagineXL4.safetensors
+
