@@ -1,0 +1,20 @@
+# Wan2.2 fun control https://docs.comfy.org/tutorials/video/wan/wan2-2-fun-control
+##ComfyUI/
+#├───📂 models/
+#│   ├───📂 diffusion_models/
+#│   │   ├─── wan2.2_fun_control_low_noise_14B_fp8_scaled.safetensors
+#│   │   └─── wan2.2_fun_control_high_noise_14B_fp8_scaled.safetensors
+#│   ├───📂 loras/
+#│   │   ├─── wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+#│   │   └─── wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+#│   ├───📂 text_encoders/
+#│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors 
+#│   └───📂 vae/
+#│       └── wan_2.1_vae.safetensors
+                            
+wget -c https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_control_low_noise_14B_fp8_scaled.safetensors -P ./models/diffusion_models
+wget -c https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_control_high_noise_14B_fp8_scaled.safetensors -P ./models/diffusion_models
+wget -c https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors -P ./models/text_encoders
+wget -c https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors -P ./models/vae
+wget -c https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors -P ./models/loras
+wget -c https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors -P ./models/loras
