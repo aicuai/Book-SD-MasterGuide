@@ -1,0 +1,18 @@
+# 本番面と失効条件の宣言。書き方: https://github.com/aicuai/.github/blob/main/docs/surface-manifest.md
+# 初版は Cloudflare の配信設定とこのリポジトリの設定ファイルから機械生成した。
+# owner と review は**必ず実態に合わせて直してください**（既定値のままにしない）。
+entity: inc
+role: "TODO 何をする面か・誰向けかを一行で書く"
+owner: aki@aicu.ai
+hosts:
+  - comfy.aicu.ai
+deploy: other
+resources:
+  # このリポが専有する Cloudflare リソース。未使用時に消してよいか即断するために書く。
+  d1: []
+  r2: []
+  kv: []
+status: live
+review:
+  next: '2027-03-31'
+  retire_when: 未定（2027-03 に再検討）
