@@ -1,0 +1,12 @@
+# 本番面の宣言（.aicu/surface.yml）が実態とずれていないか検査する。
+# 規約と再利用ワークフロー: https://github.com/aicuai/.github
+name: surface
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  surface:
+    uses: aicuai/.github/.github/workflows/surface-manifest.yml@main
