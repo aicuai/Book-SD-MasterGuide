@@ -2,7 +2,7 @@
 # 初版は Cloudflare の配信設定とこのリポジトリの設定ファイルから機械生成した。
 # owner と review は**必ず実態に合わせて直してください**（既定値のままにしない）。
 entity: inc
-role: "TODO 何をする面か・誰向けかを一行で書く"
+role: "書籍『ComfyUI Master Guide』（2025-05 刊）の読者向けサポートサイト"
 owner: aki@aicu.ai
 hosts:
   - comfy.aicu.ai
