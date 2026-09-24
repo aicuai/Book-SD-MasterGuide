@@ -2,6 +2,8 @@
 
 ## Book [ComfyUI Master Guide]
 
+こちらはComfyUI マスターガイド (#ComfyUI紫本) サポートリポジトリです
+
 ComfyUI Master Guide will be published at May 8th, 2025!
 
 [https://j.aicu.ai/comfysb](https://j.aicu.ai/comfysb)
